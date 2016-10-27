@@ -2,21 +2,30 @@
 <body>
 <h2>Emoji Combiner</h2>
 
-<p>Enter emojis and they will be combined.</p>
+<p>Enter emojis and they will be combined:</p>
 
-<input id="text_input" onkeyup="text_update()" type="text" value="👨❤️👨 👩❤️💋👩 👨👩👦👦  👨👩👦">
+<input id="text_input" onkeyup="text_update()" type="text" value="👨👩👦👦">
 
 <br>
 
 Result: <span id="span_display"></span>
 
-<p>This only works on some emojis. Examples (copy-paste into the box above), see more <a href="http://emojipedia.org/emoji-zwj-sequences/">here</a></p>
+<p>Or enter a combined emoji and it will be decomposed:</p>
 
-<p>👨❤️👨</p>
-<p>👩❤️💋👩</p>
-<p>👨👩👦👦</p>
-<p>👨👩👦</p>
-<p>👨👦</p>
+<input id="text_input2" onkeyup="text_update2()" type="text" value="👨‍👩‍👦‍👦">
+
+<br>
+
+Result: <span id="span_display2"></span>
+
+
+<p>This only works on some emojis. Examples (copy-paste into boxes above), see more <a href="http://emojipedia.org/emoji-zwj-sequences/">here</a></p>
+
+<p>👨❤️👨 => 👨‍❤️‍👨</p>
+<p>👩❤️💋👩 => 👩‍❤️‍💋‍👩</p>
+<p>👨👩👦👦 => 👨‍👩‍👦‍👦</p>
+<p>👨👩👦 => 👨‍👩‍👦</p>
+<p>👨👦 => 👨‍👦</p>
 
 By <a href="http://www.gkovacs.com/">Geza Kovacs</a>. Emojis are combined using <a href="https://en.wikipedia.org/wiki/Zero-width_joiner">ZWJ</a>.
 

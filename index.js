@@ -44,9 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $, runes, text_update;
+	var $, runes, text_update, text_update2;
 	$ = __webpack_require__(1);
 	runes = __webpack_require__(2);
+	window.runes = runes;
 	window.text_update = text_update = function(){
 	  var input_text, zwj, split_by_chars, with_zwj;
 	  input_text = $('#text_input').val();
@@ -55,8 +56,32 @@
 	  with_zwj = split_by_chars.join(zwj);
 	  return $('#span_display').text(with_zwj);
 	};
+	window.text_update2 = text_update2 = function(){
+	  var input_text, position, output, next_char, as_string;
+	  input_text = $('#text_input2').val();
+	  position = 0;
+	  output = [];
+	  for (;;) {
+	    next_char = input_text.codePointAt(position);
+	    position += 1;
+	    if (next_char == null) {
+	      break;
+	    }
+	    if (next_char === 0x200D || next_char === 0xdc66 || next_char === 0xdc68 || next_char === 0xdc69) {
+	      continue;
+	    }
+	    as_string = String.fromCodePoint(next_char);
+	    if (as_string === String.fromCodePoint(0xfffd)) {
+	      continue;
+	    }
+	    output.push(as_string);
+	  }
+	  console.log(output);
+	  return $('#span_display2').text(output.join(''));
+	};
 	$(document).ready(function(){
-	  return text_update();
+	  text_update();
+	  return text_update2();
 	});
 	//# sourceMappingURL=/Users/geza/zwj/node_modules/livescript-loader/index.js!/Users/geza/zwj/index.ls.map
 
