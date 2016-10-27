@@ -2,18 +2,20 @@
 <body>
 <h2>Emoji Combiner</h2>
 
-<p>Some emojis can be combined to create others. Try out the following:</p>
-
-<p>👨👩👦👦</p>
-<p>👨❤️👨</p>
+<p>Enter emojis and they will be combined.</p>
 
 <input id="text_input" onkeyup="text_update()" type="text" value="👨❤️👨">
 
 <br>
 
-Output: <span id="span_display"></span>
+Result: <span id="span_display"></span>
 
-<br><br>
+<p>This only works on some emojis. Examples:</p>
+
+<p>👨👩👦👦</p>
+<p>👨👩👦</p>
+<p>👨👦</p>
+<p>👨❤️👨</p>
 
 By <a href="http://www.gkovacs.com/">Geza Kovacs</a>. Emojis are combined using <a href="https://en.wikipedia.org/wiki/Zero-width_joiner">ZWJ</a>, read more <a href="http://2016.emojicon.co/sessions/what-the-zwj-the-art-of-zwj-sequences/">here</a>.
 
