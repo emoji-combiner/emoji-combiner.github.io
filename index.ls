@@ -18,7 +18,7 @@ window.text_update2 = text_update2 = ->
     position += 1
     if not next_char?
       break
-    if next_char == 0x200D or next_char == 0xdc66 or next_char == 0xdc67 or next_char == 0xdc68 or next_char == 0xdc69
+    if next_char == 0x200D or next_char == 0xdc66 or next_char == 0xdc67 or next_char == 0xdc68 or next_char == 0xdc69 or next_char == 0xdc8b
       continue
     as_string = String.fromCodePoint(next_char)
     if as_string.codePointAt(0) == 0xfffd

@@ -67,7 +67,7 @@
 	    if (next_char == null) {
 	      break;
 	    }
-	    if (next_char === 0x200D || next_char === 0xdc66 || next_char === 0xdc67 || next_char === 0xdc68 || next_char === 0xdc69) {
+	    if (next_char === 0x200D || next_char === 0xdc66 || next_char === 0xdc67 || next_char === 0xdc68 || next_char === 0xdc69 || next_char === 0xdc8b) {
 	      continue;
 	    }
 	    as_string = String.fromCodePoint(next_char);
