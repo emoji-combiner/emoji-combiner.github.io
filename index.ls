@@ -18,13 +18,12 @@ window.text_update2 = text_update2 = ->
     position += 1
     if not next_char?
       break
-    if next_char == 0x200D or next_char == 0xdc66 or next_char == 0xdc68 or next_char == 0xdc69
+    if next_char == 0x200D or next_char == 0xdc66 or next_char == 0xdc67 or next_char == 0xdc68 or next_char == 0xdc69
       continue
     as_string = String.fromCodePoint(next_char)
-    if as_string == String.fromCodePoint(0xfffd)
+    if as_string.codePointAt(0) == 0xfffd
       continue
     output.push as_string
-  console.log output
   $('#span_display2').text output.join('')
 
 $(document).ready ->

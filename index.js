@@ -67,16 +67,15 @@
 	    if (next_char == null) {
 	      break;
 	    }
-	    if (next_char === 0x200D || next_char === 0xdc66 || next_char === 0xdc68 || next_char === 0xdc69) {
+	    if (next_char === 0x200D || next_char === 0xdc66 || next_char === 0xdc67 || next_char === 0xdc68 || next_char === 0xdc69) {
 	      continue;
 	    }
 	    as_string = String.fromCodePoint(next_char);
-	    if (as_string === String.fromCodePoint(0xfffd)) {
+	    if (as_string.codePointAt(0) === 0xfffd) {
 	      continue;
 	    }
 	    output.push(as_string);
 	  }
-	  console.log(output);
 	  return $('#span_display2').text(output.join(''));
 	};
 	$(document).ready(function(){
