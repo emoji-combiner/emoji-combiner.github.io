@@ -49,7 +49,6 @@
 	runes = __webpack_require__(2);
 	window.text_update = text_update = function(){
 	  var input_text, zwj, split_by_chars, with_zwj;
-	  console.log('text_update called');
 	  input_text = $('#text_input').val();
 	  zwj = String.fromCharCode(0x200D);
 	  split_by_chars = runes(input_text);
